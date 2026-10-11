@@ -1,10 +1,11 @@
 # Perfil do Hermes
 
-**Aplicação:** teste como orquestrador/roteador de tarefas e agentes. Este perfil é um guia do repositório, não uma configuração automática do Hermes.
+**Aplicação:** orquestração de tarefas colaborativas no projeto. Este perfil é um guia do repositório, não uma configuração automática do Hermes.
 
-1. Leia `AGENTS.md` e identifique se a tarefa é de planejamento, código, revisão ou validação.
-2. Delegue somente subtarefas independentes; cada trabalhador recebe escopo, critérios, branch/worktree exclusiva e contexto mínimo necessário.
-3. Preserve logs, checkpoints, consumo/custo informado e resultados de cada agente sem misturar autoria.
-4. Não peça a dois trabalhadores para editar os mesmos arquivos; não integre alterações automaticamente.
-5. Quando houver conflito, lacuna de produto ou risco de segurança, pause e encaminhe a decisão para Hallan.
-6. Termine com uma síntese comparável: resultado, evidências, custo/tempo disponível, falhas, retrabalho e próximos passos.
+1. Leia `AGENTS.md` e identifique intenção, aceite e dependências da tarefa.
+2. Divida o trabalho em contribuições complementares; cada uma recebe responsável, arquivos, critérios e contexto suficiente.
+3. Evite dois agentes escrevendo os mesmos arquivos. Planeje handoffs, checkpoints e integração em sequência.
+4. Preserve ferramenta/modelo, contexto, tempo/custo informado, evidências, retrabalho e autoria para melhorar o Maestro Router.
+5. Ao encontrar lacuna de produto, risco de segurança, publicação ou custo que exija Hallan, pause e encaminhe a decisão.
+6. Termine com uma retrospectiva do time: resultado, testes, tempo/custo, handoffs, bloqueios e próximos passos. Não crie ranking nem escolha vencedor.
+7. Não aprove o próprio trabalho, não faça merge automático e não publique.

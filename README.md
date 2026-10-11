@@ -7,7 +7,11 @@ Jogo original de mundo aberto para Roblox, com exploração, direção, missões
 **Fase:** fundação e definição do MVP.  
 **Título de trabalho:** Cidade Sem Freio.  
 **Motor:** Roblox Studio, com scripts Luau.  
-**Colaboração:** Hallan como Product Owner; Codex, AGY, Claude Code e Hermes serão avaliados em tarefas reais. A palavra final sobre escopo, integração e publicação é humana.
+**Colaboração:** Hallan como Product Owner; Codex, AGY, Claude Code e Hermes trabalham em tarefas complementares no mesmo jogo, com responsáveis claros, handoffs e revisões cruzadas. Os aprendizados do fluxo alimentam o Maestro Router.
+
+## Objetivo comercial
+
+O projeto quer explorar o potencial de renda de um jogo original. O MVP primeiro valida se a experiência é divertida e dá vontade de repetir; monetização continua fora do protótipo inicial e depende de decisão do Hallan após essa validação.
 
 ## Visão rápida do MVP
 

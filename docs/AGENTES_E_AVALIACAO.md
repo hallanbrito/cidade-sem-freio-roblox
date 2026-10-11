@@ -1,59 +1,64 @@
-# Agentes e experimento comparativo
+# Equipe de agentes e aprendizado para o Maestro Router
 
 ## Propósito
 
-Avaliar como Codex, AGY, Claude Code e Hermes colaboram na construção do mesmo MVP e registrar aprendizados para o Maestro Router. Nenhum agente recebe vantagem por uma arquitetura feita só para ele.
+Hallan, Codex, AGY, Claude Code e Hermes vão colaborar na construção de um único jogo. O objetivo é entregar um MVP original e aprender como coordenar ferramentas e pessoas no fluxo que pode alimentar o Maestro Router. O projeto não distribui versões concorrentes do mesmo jogo.
 
-## Entradas por agente
+## Papéis
 
-| Agente | Guia do projeto | Perfil de colaboração | Skill aplicável |
-|---|---|---|---|
-| Codex | `AGENTS.md` | `.agents/profiles/codex.md` | `.agents/skills/*/SKILL.md` conforme tarefa |
-| AGY / Antigravity | `AGENTS.md`, `GEMINI.md` | `.agents/profiles/agy.md` | skill relevante fornecida como contexto |
-| Claude Code | `AGENTS.md`, `CLAUDE.md` | `.agents/profiles/claude-code.md` | skill relevante fornecida como contexto |
-| Hermes | `AGENTS.md`, `HERMES.md` | `.agents/profiles/hermes.md` | skills relevantes distribuídas aos agentes |
-
-Arquivos do repositório orientam o trabalho, mas nem todos os clientes carregam os mesmos nomes automaticamente. Antes de cada teste, registrar o que a ferramenta realmente carregou.
-
-## Protocolo justo
-
-- Mesmo commit inicial, prompt, escopo e critérios para tarefas comparáveis.
-- Branch/worktree isolada por tentativa.
-- Não compartilhar a solução de outro agente antes da execução.
-- Registrar versões/modelos, contexto aplicado, tempo, uso/custo exposto pela ferramenta, diff, testes, retrabalho e bloqueios.
-- Hallan decide a integração; nenhum agente aprova ou publica sua própria alteração.
-
-## Tarefas piloto
-
-1. Implementar a validação de uma entrega para conceder recompensa uma única vez.
-2. Corrigir um bug reproduzível no estado/feedback da missão.
-3. Revisar uma mudança de progressão e apontar riscos/testes antes de editar.
-4. Hermes coordena duas tarefas independentes e preserva branches, checkpoints e resumo de resultados.
-
-## Rubrica (1 a 5)
-
-| Dimensão | Pergunta |
+| Participante | Responsabilidade |
 |---|---|
-| Correção | Cumpriu critérios e comportamento esperado? |
-| Segurança | Servidor valida estado, entradas e recompensas? |
-| Clareza | Código e explicação ajudam Hallan a aprender? |
-| Escopo | Evitou alterações, dependências e arquitetura desnecessárias? |
-| Validação | Testes e passos são reproduzíveis e honestamente relatados? |
-| Autonomia | Avançou sem inventar produto ou esconder decisões? |
-| Eficiência | Quanto tempo, consumo e retrabalho foram necessários? |
-| Coordenação | Hermes delegou, isolou e retomou sem colisões? |
+| Hallan | Product Owner; define prioridade e aceite, decide produto, custos, integração e publicação. |
+| Hermes | Quando instalado e autorizado, coordena tarefas, contexto, handoffs e checkpoints; não aprova nem integra automaticamente. |
+| Codex, AGY e Claude Code | Assumem implementação, análise, testes ou revisão conforme a tarefa; os papéis podem rodar entre eles. |
 
-## Ficha por execução
+O papel específico é definido por tarefa, contexto e capacidade verificada. Não presumimos que uma ferramenta seja melhor em uma função antes de observar seu trabalho.
 
-- Data e tarefa:
-- Agente, produto, modelo/versão:
+## Forma de trabalho
+
+1. Hallan e o time definem uma entrega observável e critérios de aceite a partir do MVP.
+2. Um responsável implementa a mudança em uma branch/worktree da tarefa.
+3. Outros agentes recebem tarefas complementares, como desenhar cenários de falha, revisar segurança cliente-servidor, verificar documentação ou testar no Studio. Cada tarefa indica arquivos permitidos e resultado esperado.
+4. Só paralelize quando os escopos não disputarem os mesmos arquivos. Compartilhe descobertas por handoff; não peça implementações duplicadas.
+5. Faça revisão cruzada e integração em passos pequenos. Hallan decide o aceite e o merge.
+6. Teste a experiência no Studio e registre evidências, limitações e pendências.
+
+## Primeiro fluxo colaborativo
+
+Para a primeira fatia de código depois da fundação do projeto, o time pode construir a validação da entrega e da recompensa única:
+
+- uma pessoa/agente fica responsável pelo código de estado e validação no servidor;
+- outro prepara cenários reproduzíveis de sucesso, falha, repetição e distância;
+- outro revisa a fronteira cliente-servidor e os riscos de recompensa duplicada;
+- Hermes, se já estiver configurado, organiza tarefas e checkpoints;
+- Hallan valida o comportamento no Studio e decide se a entrega atende ao MVP.
+
+Atribuir nomes aos papéis é uma decisão do planejamento da tarefa; eles podem rodar nas fatias seguintes para que Hallan conheça o fluxo de cada ferramenta.
+
+## Aprendizados para o Maestro
+
+Registre por tarefa, sem criar classificação entre agentes:
+
+- data, intenção, aceite e commit base;
+- responsável, revisores, participantes e papel de cada um;
+- ferramenta/modelo/versão e contexto realmente fornecido;
+- tempo e uso/custo informado por cada ferramenta;
+- arquivos/diff, verificações, evidências e limitações;
+- handoffs, retrabalho, conflitos, bloqueios e decisões humanas;
+- melhoria sugerida para o fluxo do Maestro.
+
+A retrospectiva avalia o resultado do time: qualidade e segurança do incremento, tempo/custo total, retrabalho, clareza dos handoffs e facilidade de Hallan entender e validar. Não há ranking nem vencedor.
+
+## Registro por tarefa
+
+- Data e entrega:
 - Commit base e branch:
-- Contexto/perfil/skills carregados:
-- Prompt e critérios:
-- Tempo e uso/custo informado:
-- Arquivos alterados e tamanho do diff:
+- Critérios de aceite:
+- Responsável e arquivos permitidos:
+- Revisores/validadores e escopo:
+- Ferramentas, modelos e contexto:
+- Handoffs e checkpoints:
 - Verificações e resultados:
-- Problemas, suposições e mudanças fora do escopo:
-- Retrabalho humano:
-- Notas da rubrica e justificativas:
-- Ideia para o Maestro Router:
+- Tempo, uso/custo informado e retrabalho:
+- Decisões e pendências para Hallan:
+- Aprendizado para o Maestro Router:
