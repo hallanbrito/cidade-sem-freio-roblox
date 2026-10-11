@@ -5,7 +5,7 @@ Estas regras se aplicam a qualquer agente, CLI ou modelo que trabalhe neste repo
 ## Autoridade e responsabilidades
 
 - Hallan é Product Owner e decide prioridade, escopo, regras de jogo, aceitação e publicação.
-- O agente pode investigar, propor, implementar dentro da tarefa, explicar alternativas e validar.
+- Os agentes investigam, propõem, implementam tarefas atribuídas, explicam alternativas e validam.
 - Decisões de produto, mudanças de escopo, dependências novas, persistência de dados, monetização, publicação e remoções exigem autorização humana explícita.
 - Nenhum agente integra ou publica a própria alteração sem autorização humana.
 
@@ -40,9 +40,11 @@ Estas regras se aplicam a qualquer agente, CLI ou modelo que trabalhe neste repo
 - Ao concluir, informe: o que mudou, arquivos afetados, verificações executadas, resultado, riscos e pendências.
 - Mantenha o diff pequeno. Não alegue teste que não executou.
 
-## Trabalho paralelo e comparação de agentes
+## Trabalho em equipe e aprendizado para o Maestro
 
-- Um agente por branch/worktree por tentativa; não edite a branch de outro agente.
-- Para comparação justa, tarefas equivalentes começam do mesmo commit e recebem os mesmos critérios.
-- Preserve logs de modelo/ferramenta, tempo, uso/custo disponível, diff, validação e retrabalho humano.
-- Use os perfis e skills em `.agents/`; não presuma que estejam carregados automaticamente.
+- A meta é construir um único jogo com trabalho coordenado entre Hallan, Codex, AGY, Claude Code e Hermes.
+- Cada tarefa tem um responsável claro pela implementação e pelos arquivos de código. Outros agentes podem contribuir com análise, critérios, documentação, testes ou revisão em escopos definidos.
+- Divida tarefas paralelas apenas quando os arquivos e resultados puderem ser integrados sem conflito. Não permita que dois agentes editem os mesmos arquivos ao mesmo tempo.
+- Use branches/worktrees para isolar mudanças por tarefa e proteger a `main`; essa separação serve à integração segura, não a implementações concorrentes do jogo.
+- Hermes pode coordenar tarefas, handoffs e checkpoints quando estiver configurado. Nenhum agente aprova o próprio trabalho ou faz merge automático.
+- Registre ferramenta/modelo, papel, tempo e custo/uso informado, validações, retrabalho e problemas de coordenação para aprender como melhorar o Maestro Router. Use os registros para retrospectiva do time, sem ranking ou vencedor.
