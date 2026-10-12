@@ -19,7 +19,7 @@ Esta primeira rodada é feita a pé. Veículo dirigível e evolução de habilid
 1. No PowerShell, dentro da pasta do repositório, confira a branch com `git status --short --branch`.
 2. Gere um arquivo novo para esta versão: `rojo build .\default.project.json -o .\CidadeSemFreio-Playtest.rbxlx`.
 3. No Studio, abra `CidadeSemFreio-Playtest.rbxlx` pelo menu **File > Open from File**. Não reutilize um `.rbxlx` exportado antes desta fatia.
-4. Confira no Explorer se `init` aparece como filho do serviço `ServerScriptService`, e se o `init` do cliente aparece dentro de `StarterPlayer > StarterPlayerScripts`. Não deve haver uma pasta comum duplicada chamada `ServerScriptService`.
+4. Confira no Explorer se `Main` aparece como Script dentro do serviço `ServerScriptService`, e se `Hud` aparece como LocalScript dentro de `StarterPlayer > StarterPlayerScripts`. Não deve haver um Script ou pasta comum duplicada chamada `ServerScriptService`.
 5. Use **Play** para iniciar uma sessão local. Não publique o Place.
 6. Durante o Play, a pasta `Workspace > CidadeSemFreioBlockout` deve aparecer. Vá ao quadro rosa, pressione **E** e atravesse a avenida até o balcão ciano.
 
