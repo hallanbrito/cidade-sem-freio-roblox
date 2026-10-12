@@ -1,2 +1,0 @@
--- Ponto de entrada do servidor.
--- As regras de missão, recompensa e progressão ainda não foram implementadas.
