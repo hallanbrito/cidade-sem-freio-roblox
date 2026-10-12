@@ -8,7 +8,7 @@ Testar uma missão curta de entrega num bairro blockout, com estado por jogador 
 
 - Praça inicial, avenida, edifícios de blockout, iluminação e ponto final destacado.
 - Aceite no quadro rosa usando a ProximityPrompt.
-- Entrega no balcão azul usando outra ProximityPrompt.
+- Entrega no balcão ciano usando outra ProximityPrompt.
 - HUD local atualizada por eventos enviados pelo servidor.
 - Um pagamento de 120 créditos por jogador nesta sessão. O estado é isolado por jogador e não usa DataStore.
 
@@ -24,11 +24,11 @@ Esta primeira rodada é feita a pé. Veículo dirigível e evolução de habilid
 
 ## Cenários a verificar
 
-1. Antes de aceitar a missão, tente usar o balcão azul: não deve conceder créditos.
+1. Antes de aceitar a missão, tente usar o balcão ciano: não deve conceder créditos.
 2. Aceite no quadro rosa: o HUD deve mostrar o objetivo e o destino.
 3. Aceite a missão e tente usar o balcão enquanto ainda está longe: a ProximityPrompt deve permanecer indisponível.
 4. Entregue no balcão: o saldo deve aumentar em 120.
-5. Use o balcão novamente: o saldo não deve aumentar de novo.
+5. Use o balcão ciano novamente: o saldo não deve aumentar de novo.
 6. Inicie um segundo jogador pelo **Test > Start** e confira que o estado e o saldo de cada um são separados.
 7. Confira a janela **View > Output** e reporte qualquer erro.
 
