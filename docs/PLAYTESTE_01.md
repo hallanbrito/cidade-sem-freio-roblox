@@ -17,10 +17,15 @@ Esta primeira rodada é feita a pé. Veículo dirigível e evolução de habilid
 ## Abrir no Studio
 
 1. No PowerShell, dentro da pasta do repositório, confira a branch com `git status --short --branch`.
-2. Execute `rojo serve default.project.json`.
-3. No Roblox Studio, conecte o plugin Rojo ao servidor local.
-4. Use **Play** para iniciar uma sessão local. Não publique o Place.
-5. Vá ao quadro rosa na praça, pressione **E** e atravesse a avenida até o balcão azul.
+2. Gere um arquivo novo para esta versão: `rojo build .\default.project.json -o .\CidadeSemFreio-Playtest.rbxlx`.
+3. No Studio, abra `CidadeSemFreio-Playtest.rbxlx` pelo menu **File > Open from File**. Não reutilize um `.rbxlx` exportado antes desta fatia.
+4. Confira no Explorer se há `ServerScriptService > init` e `StarterPlayer > StarterPlayerScripts > init`.
+5. Use **Play** para iniciar uma sessão local. Não publique o Place.
+6. Durante o Play, a pasta `Workspace > CidadeSemFreioBlockout` deve aparecer. Vá ao quadro rosa, pressione **E** e atravesse a avenida até o balcão ciano.
+
+### Sincronização ao vivo com Rojo (opcional)
+
+Se preferir sincronização ao vivo, pare o Play, execute `rojo serve .\default.project.json` no repositório e conecte o plugin Rojo ao Studio. Aguarde o plugin indicar conexão e confira os dois scripts no Explorer antes de clicar em **Play**. Se o plugin desconectar, use o arquivo novo criado pelo passo anterior.
 
 ## Cenários a verificar
 
